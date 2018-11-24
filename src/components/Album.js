@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums.js';
+import PlayerBar from './PlayerBar.js'
 
 class Album extends Component {
   constructor(props){
@@ -56,6 +57,16 @@ class Album extends Component {
     handleSongHoverEnd(){
       this.setState({ currentHovered: null });
     }
+    handlePrevClick(){
+      const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
+      const newIndex = Math.max(0, currentIndex - 1);
+      const newSong = this.state.album.songs[newIndex];
+      this.setSong(newSong);
+      this.play();
+    }
+    handleNextClick(){
+
+    }
   render(){
     console.log(this.state.currentHovered);
     return(
@@ -77,6 +88,12 @@ class Album extends Component {
                 <tr key={index} className="song" onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.handleSongHover(song)} onMouseLeave={() => this.handleSongHoverEnd()}><td> {this.getIconFor(song, index)} {song.title} ({song.duration} seconds)</td></tr>)}
               </tbody>
             </table>
+            <PlayerBar
+              isPlaying={this.state.isPlaying}
+              currentSong={this.state.currentSong}
+              handleSongClick={() => this.handleSongClick(this.state.currentSong)}
+              handlePrevClick={() => this.handlePrevClick()}
+              />
           </div>
         </section>
       </section>
