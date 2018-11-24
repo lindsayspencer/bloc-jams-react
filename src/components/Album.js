@@ -101,6 +101,17 @@ class Album extends Component {
       this.audioElement.volume = e.target.value;
       this.setState({currentVolume: e.target.value});
     }
+    formatTime(time){
+      const minutes = Math.floor(time / 60);
+      const seconds = (time % 60).toFixed(0);
+      if(!time){
+        return "-:--";
+      } else if(seconds <= 9) {
+        return minutes + ":0" + seconds;
+      } else {
+        return minutes + ":" + seconds;
+      }
+    }
   render(){
     return(
       <section className="album">
@@ -118,7 +129,7 @@ class Album extends Component {
               </colgroup>
               <tbody>
               { this.state.album.songs.map( (song, index) =>
-                <tr key={index} className="song" onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.handleSongHover(song)} onMouseLeave={() => this.handleSongHoverEnd()}><td> {this.getIconFor(song, index)} {song.title} ({song.duration} seconds)</td></tr>)}
+                <tr key={index} className="song" onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.handleSongHover(song)} onMouseLeave={() => this.handleSongHoverEnd()}><td> {this.getIconFor(song, index)} {song.title} ({this.formatTime(song.duration)} minutes)</td></tr>)}
               </tbody>
             </table>
             <PlayerBar
@@ -132,6 +143,7 @@ class Album extends Component {
               handleTimeChange={(e) => this.handleTimeChange(e)}
               currentVolume={this.audioElement.currentVolume}
               handleVolumeChange={(e) => this.handleVolumeChange(e)}
+              formatTime={(time) => this.formatTime(time)}
               />
           </div>
         </section>
