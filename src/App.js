@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+// added for responsive nav bar
+import ResponsiveMenu from 'react-responsive-navbar';
 // added to implement the router
 import { Route, Link } from 'react-router-dom';
 import './App.css';
@@ -12,10 +14,18 @@ class App extends Component {
       <div className="App">
         <header>
           <nav>
-          <ul>
-            <li><Link to="/">Landing</Link></li>
-            <li><Link to="/library">Library</Link></li>
-          </ul>
+          <ResponsiveMenu
+            menuOpenButton={ <div /> }
+            menuCloseButton={ <div /> }
+            changeMenuOn="500px"
+            largeMenuClassName="large-menu-classname"
+            smallMenuClassName="small-menu-classname"
+            menu={
+              <ul>
+                <li><Link to="/"><i className="icon ion-md-home"></i> Home</Link></li>
+                <li><Link to="/library"><i className="icon ion-md-musical-notes"></i> Music</Link></li>
+              </ul>
+            } />
           </nav>
           <h1>Bloc Jams</h1>
         </header>

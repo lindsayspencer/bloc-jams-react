@@ -30,3 +30,158 @@
     transform: rotate(360deg);
   }
 }
+
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+nav a {
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 80px;
+  height: 40px;
+  font-size: 1.2em;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  background-color: #424242;
+  padding: 5px 15px 5px 15px;
+}
+
+nav a:hover{
+  border-color: #BA55D3;
+}
+
+.icon {
+  color: #BA55D3;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+header {
+  background-color: #212121;
+  color: #fff;
+  margin-top: 0;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  padding-top: 10px;
+  padding-bottom: 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+main {
+  margin-top: 150px;
+}
+
+.hero-title {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2em;
+}
+
+.lg {
+  font-size: 2em;
+}
+
+.selling-points {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #303030;
+  margin-top: 20px;
+}
+
+.point {
+  max-width: 350px;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* styling for album stuff */
+
+img {
+  width: auto;
+  max-height: 200px;
+}
+
+.album-link {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 150px;
+  height: 40px;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  background-color: #212121;
+  padding: 5px 15px 5px 15px;
+}
+
+.album-link:hover{
+  border-color: #BA55D3;
+}
+
+.album-item {
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  min-height: 220px;
+  padding: 20px;
+  margin: 20px auto;
+  align-items: center;
+  background-color: #303030;
+}
+
+.album-item ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 2em;
+}
+
+/* styling for playerbar */
+
+.player-bar {
+  background-color: #303030;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-bar-section {
+  padding: 5px 20px;
+}
+
+table {
+  width: 300px;
+  margin: 20px auto;
+}
+
+button {
+  color: #212121;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  background-color: #BA55D3;
+  padding: 5px 15px 5px 15px;
+}
+
+button:hover{
+  border-color: #212121;
+}

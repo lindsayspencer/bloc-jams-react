@@ -14,13 +14,20 @@ class Library extends Component {
     return(
       <section className='library'>
       { this.state.albums.map( (album, index) =>
-          <Link to={`/album/${album.slug}`} key={index}>
-          {album.title}
-          <img src={album.cover} alt={album.title} />
-          <div>{album.title}</div>
-          <div>{album.artist}</div>
-          <div>{album.songs.length} tracks</div>
-        </Link>
+        <section className="album-item">
+
+          <div>
+          <img src={album.albumCover} alt={album.title} />
+          </div>
+          <ul>
+            <li>Album: {album.title}</li>
+            <li>Artist: {album.artist}</li>
+            <li>Length: {album.songs.length} tracks</li>
+          </ul>
+         <Link to={`/album/${album.slug}`} key={index}>
+          <button className="album-link">View Album <i className="icon ion-md-arrow-forward"></i></button>
+         </Link>
+        </section>
       ) }
         </section>
        );
