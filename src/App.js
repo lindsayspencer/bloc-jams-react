@@ -34,6 +34,7 @@ class App extends Component {
           <Route path="/library" component={Library} />
           <Route path="/album/:slug" component={Album} />
         </main>
+        <p id="signature"><i className="icon ion-logo-twitter"></i> @lindscatspencer • <a href="https://reactjs.org/">React.js</a></p>
       </div>
     );
   }

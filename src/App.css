@@ -185,3 +185,8 @@ button {
 button:hover{
   border-color: #212121;
 }
+
+/* signature styling */
+#signature {
+  text-align: center;
+}
