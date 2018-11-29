@@ -1,4 +1,4 @@
-# Doodaily
+# JamNow
 
 > by @lindscatspencer (twitter) / @lindsayspencer (github)
 
