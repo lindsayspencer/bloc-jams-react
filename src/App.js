@@ -27,7 +27,7 @@ class App extends Component {
               </ul>
             } />
           </nav>
-          <h1>JamNow</h1>
+          <h1>Cat's Meow Audio</h1>
         </header>
         <main>
           <Route exact path="/" component={Landing} />

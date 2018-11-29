@@ -1,4 +1,4 @@
-# JamNow
+# Cat's Meow Audio
 
 > by @lindscatspencer (twitter) / @lindsayspencer (github)
 
